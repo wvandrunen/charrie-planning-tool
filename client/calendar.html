@@ -1,0 +1,36 @@
+<head>
+    <title>hello</title>
+</head>
+
+<body>
+<div class="ui two column page grid">
+    <div class="column left aligned">
+        <a class="circular ui left labeled icon button">
+            <i class="left arrow icon"></i>
+            Previous week
+        </a>
+    </div>
+
+    <div class="column right aligned">
+        <a class="circular ui right labeled icon button">
+            <i class="right arrow icon"></i>
+            Next week
+        </a>
+    </div>
+</div>
+<div class="ui seven column page grid">
+    {{#each weekDays}}
+        <div class="column">
+            <div class="ui segment">
+                {{name}}
+            </div>
+            <div class="ui icon buttons">
+                <a class="ui {{#if morning }}active{{/if}} button toggle-morning" data-date="{{date}}"><i class="sun icon"></i></a>
+                <a class="ui {{#if evening }}active{{/if}} button toggle-evening" data-date="{{date}}"><i class="moon icon"></i></a>
+                <a class="ui button"><i class="book icon"></i></a>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+</body>
